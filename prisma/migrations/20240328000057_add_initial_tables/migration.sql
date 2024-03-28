@@ -11,7 +11,7 @@ CREATE TABLE "User" (
 CREATE TABLE "BarberShop" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "adress" TEXT NOT NULL,
+    "address" TEXT NOT NULL,
     "imgUrl" TEXT NOT NULL,
 
     CONSTRAINT "BarberShop_pkey" PRIMARY KEY ("id")
