@@ -40,9 +40,40 @@ agora vamos executar a seed para inserir dados fake no banco
 
 - npx prisma db seed
 
-## dependencias
+## Shadcn-ui
 
 SHADCN - Lib de components para ultilizarmos no projeto
 
 - npx shadcn-ui@latest init
 
+jogue as pastas criadas para parta app
+(recomendado renomar colocando _ na frente dos nomes afim de organização do projeto)
+
+em components.json mude o path dos diretorios no campo "aliases"
+
+no globals.css vc pode acrescentar suas var de cores
+
+opcional:: em layout.tsx na raiz da app .. insira a clas "dark" no body 
+
+## lib DateFns
+Lib para formatar datas de foma facil e rapida
+- npm i date-fns
+
+## finecut
+
+crie uma pasta (home) na pasta app e mova o page.tsx da raiz para esta pasta.
+() - para route groups
+
+## consumindo dados do prisma
+
+utilizando o server componet do next chamaremos o prisma dentro da home page
+para isso vamos criar na pasta _lib em "app" o arquivo prisma.ts
+(use o existente como exemplo)
+
+Agora dentro do local que vc quer trazer dados vc pode chamar uma consuta do prisma.
+(use como exemplo a consulta de barbearias dentro de app/(home)/page.tsx)
+
+## imagem via url no next
+
+Devemos configurar em next config o dominio remoto de onde vem a imagem.
+(consulte o parametro images dentro do arquivo next.config)

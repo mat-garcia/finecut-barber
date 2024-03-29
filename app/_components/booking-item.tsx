@@ -23,7 +23,6 @@ const BookingItem = () => {
                     <p className="text-sm">Mês</p>
                     <p className="text-2xl">06</p>
                     <p className="text-sm">09:55</p>
-
                 </div>
             </CardContent>
         </Card>
