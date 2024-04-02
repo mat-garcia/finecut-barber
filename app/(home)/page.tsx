@@ -6,10 +6,23 @@ import BookingItem from '../_components/booking-item';
 import BarbershopItem from './_components/barbershop-item';
 import { db } from '../_lib/prisma';
 
+// Embaralha o array usando o algoritmo de Fisher-Yates
+function shuffleArray(populares: any) {
+  for (let i = populares.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [populares[i], populares[j]] = [populares[j], populares[i]];
+  }
+  return populares;
+}
+
 export default async function Home() {
   //buscar barbearias
   const barbershops = await db.barberShop.findMany({})
-
+  
+  //gera a section populares de forma randomica
+  const populares = await db.barberShop.findMany({})
+  const shuffledBarbershops = shuffleArray(populares);
+  const randomBarbershops = shuffledBarbershops.slice(0, 3);
   return (
     <main className="">
       <Header></Header>
@@ -43,7 +56,18 @@ export default async function Home() {
             ))
             }
           </div>
-        
+      </div>
+      <div className='mt-6 mb-[4.5rem]'>
+        <h2 className="text-xs px-5 mb-3 uppercase text-gray-400 font-bold">
+         Populares
+        </h2>
+          <div className='flex px-5 gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden'>
+            {
+            randomBarbershops.map((randonbarbershop: any) => (
+              <BarbershopItem key={randonbarbershop.id} barbershop={randonbarbershop}/>
+            ))
+            }
+          </div>
       </div>
 
     </main>
