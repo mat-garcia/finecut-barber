@@ -40,6 +40,12 @@ agora vamos executar a seed para inserir dados fake no banco
 
 - npx prisma db seed
 
+#### Trocando de banco
+
+Ao trocar de provider execute este comando q ira criar tudo oque tu fez neste novo provider
+
+- npx prisma db push
+
 ## Shadcn-ui
 
 SHADCN - Lib de components para ultilizarmos no projeto
