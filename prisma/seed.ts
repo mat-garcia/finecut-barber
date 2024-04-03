@@ -33,31 +33,31 @@ async function seedDatabase() {
                 name: "Corte de Cabelo",
                 description: "Um tapa no vizual",
                 price: 35.0,
-                imageUrl: "https://th.bing.com/th/id/R.6d32c17b782c24b2653c379e2270e75e?rik=Y09qsUDpsK91zw&riu=http%3a%2f%2fwww.obarbeiro.com.br%2fwp-content%2fuploads%2f2014%2f03%2fcareca-capa-460x259.88700565.jpg&ehk=Rmw9vqDjMHJFCcCrRUCpanJbJkqGm477oqzn6BaFuvs%3d&risl=&pid=ImgRaw&r=0"
+                imageUrl: "https://utfs.io/f/7f20c1ba-2908-4781-a6e5-2dc3fe5913cb-84qbq1.jpg"
             },
             {
                 name: "Barba",
                 description: "Rosto Lizinho ou bigode finin",
                 price: 20.0,
-                imageUrl: "https://th.bing.com/th/id/R.6d32c17b782c24b2653c379e2270e75e?rik=Y09qsUDpsK91zw&riu=http%3a%2f%2fwww.obarbeiro.com.br%2fwp-content%2fuploads%2f2014%2f03%2fcareca-capa-460x259.88700565.jpg&ehk=Rmw9vqDjMHJFCcCrRUCpanJbJkqGm477oqzn6BaFuvs%3d&risl=&pid=ImgRaw&r=0"
+                imageUrl: "https://utfs.io/f/74fea28d-503d-43b2-87ca-6cceee211e36-y3rdfw.jpg"
             },
             {
                 name: "Pézinho",
                 description: "é o pezinho do cabelo não sua lancha",
                 price: 10.0,
-                imageUrl: "https://th.bing.com/th/id/R.6d32c17b782c24b2653c379e2270e75e?rik=Y09qsUDpsK91zw&riu=http%3a%2f%2fwww.obarbeiro.com.br%2fwp-content%2fuploads%2f2014%2f03%2fcareca-capa-460x259.88700565.jpg&ehk=Rmw9vqDjMHJFCcCrRUCpanJbJkqGm477oqzn6BaFuvs%3d&risl=&pid=ImgRaw&r=0"
+                imageUrl: "https://utfs.io/f/cc5ebd26-357a-4130-84e5-c136340d76f1-h10afu.jpg"
             },
             {
                 name: "Sombrancelha",
                 description: "Que tal arrancar essa taturana da testa?",
                 price: 20.0,
-                imageUrl: "https://th.bing.com/th/id/R.6d32c17b782c24b2653c379e2270e75e?rik=Y09qsUDpsK91zw&riu=http%3a%2f%2fwww.obarbeiro.com.br%2fwp-content%2fuploads%2f2014%2f03%2fcareca-capa-460x259.88700565.jpg&ehk=Rmw9vqDjMHJFCcCrRUCpanJbJkqGm477oqzn6BaFuvs%3d&risl=&pid=ImgRaw&r=0"
+                imageUrl: "https://utfs.io/f/bcc0665d-e475-4d11-8fad-3900aee6bc5d-oo1hmb.jpg"
             },
             {
                 name: "Cabelo mais Barba",
                 description: "De nada adianta arrumar o cabelo na regua e a barba parecer um gamba na cara.",
                 price: 65.0,
-                imageUrl: "https://th.bing.com/th/id/R.6d32c17b782c24b2653c379e2270e75e?rik=Y09qsUDpsK91zw&riu=http%3a%2f%2fwww.obarbeiro.com.br%2fwp-content%2fuploads%2f2014%2f03%2fcareca-capa-460x259.88700565.jpg&ehk=Rmw9vqDjMHJFCcCrRUCpanJbJkqGm477oqzn6BaFuvs%3d&risl=&pid=ImgRaw&r=0"
+                imageUrl: "https://utfs.io/f/a457eb47-01aa-40dc-a472-6e6466067316-hsg8u8.jpg"
             }
         ]
         const barbershops = [];
@@ -85,6 +85,7 @@ async function seedDatabase() {
                             id: barbershop.id,
                         },
                     },
+                    imageUrl: service.imageUrl,
                 },
             });
            }
