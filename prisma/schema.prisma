@@ -43,7 +43,6 @@ model Service {
   Booking      Booking[]
   imageUrl     String
 }
-
 model Booking {
   id           String     @id @default(uuid())
   userId       String
