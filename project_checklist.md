@@ -83,3 +83,27 @@ Agora dentro do local que vc quer trazer dados vc pode chamar uma consuta do pri
 
 Devemos configurar em next config o dominio remoto de onde vem a imagem.
 (consulte o parametro images dentro do arquivo next.config)
+
+
+## Criando Autenticação com NextAuth
+
+vamos instalar o nextauth
+
+- npm install next-auth
+
+agora vamos criar o arquivo route.js dentro de 
+'app/api/auth/[...nextauth]'
+
+aqui vamos configurar o provider do next auth
+
+use o arquivo como exemplo.
+
+tambem precisamos instalar o adptador do prisma
+
+ npm install @auth/prisma-adapter
+
+ no rout tb temos que configurar o adapter,
+use o arquivo como exemplo novamente.
+
+agora vamos inserir a as models do prisma para ultilzar o nextauth.
+use a documentação para pegar as models ou use o proprio arquivo de schema deste projeto.
