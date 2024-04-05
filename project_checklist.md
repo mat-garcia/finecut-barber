@@ -107,3 +107,10 @@ use o arquivo como exemplo novamente.
 
 agora vamos inserir a as models do prisma para ultilzar o nextauth.
 use a documentação para pegar as models ou use o proprio arquivo de schema deste projeto.
+
+
+configure o google cloud inserindo o novo projeto e crie a auth com google e o id tb passando o url da app e pra gerar o clinet id e client secret.. 
+pesquise no yt next auth com google caso necessario.
+
+Agora criamos o authprovider no auth.tsx  dentro da pasta providers.
+Insira ele no layout , englobando toda a app.
