@@ -1,5 +1,7 @@
 "use client"
+import SideMenu from "@/app/_components/side-menu";
 import { Button } from "@/app/_components/ui/button";
+import { Sheet, SheetTrigger, SheetContent } from "@/app/_components/ui/sheet";
 import { BarberShop } from "@prisma/client";
 import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
@@ -20,9 +22,18 @@ const BarbershopInfo = ({barbershop}:BarbershopInfoProps) => {
             <Button onClick={handleBackclick} variant={"outline"} size="icon" className="z-50 absolute top-4 left-4">
                 <ChevronLeftIcon/>
             </Button>
-            <Button variant={"outline"} size="icon" className="z-50 absolute top-4 right-4">
-                <MenuIcon/>
-            </Button>
+           
+            <Sheet>
+                {/* asChild para usar o button dentro como gatilho */}
+                <SheetTrigger asChild>
+                    <Button variant="outline" size="icon" className="z-50 absolute top-4 right-4">
+                        <MenuIcon/>
+                    </Button>
+                </SheetTrigger>
+                <SheetContent className="p-0">
+                    <SideMenu/>
+                </SheetContent>
+            </Sheet>
             <div className="absolute bg-gradient-to-t from-background to-transparent z-40 bottom-0 w-full h-24"></div>
             <Image className="opacity-75"
             src={barbershop.imageUrl} fill alt={barbershop.name} 
